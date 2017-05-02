@@ -1,0 +1,106 @@
+{u'count': 386069, u'_id': None}
+{u'count': 477, u'_id': u'2205'}
+{u'count': 425, u'_id': u'2089'}
+{u'count': 287, u'_id': u'2065'}
+{u'count': 221, u'_id': u'2062'}
+{u'count': 207, u'_id': u'2088'}
+{u'count': 199, u'_id': u'2000'}
+{u'count': 157, u'_id': u'2193'}
+{u'count': 142, u'_id': u'2113'}
+{u'count': 124, u'_id': u'2048'}
+{u'count': 113, u'_id': u'2050'}
+{u'count': 109, u'_id': u'2208'}
+{u'count': 97, u'_id': u'2042'}
+{u'count': 91, u'_id': u'2037'}
+{u'count': 81, u'_id': u'2060'}
+{u'count': 64, u'_id': u'2011'}
+{u'count': 58, u'_id': u'2112'}
+{u'count': 56, u'_id': u'2007'}
+{u'count': 55, u'_id': u'2203'}
+{u'count': 53, u'_id': u'2207'}
+{u'count': 49, u'_id': u'2067'}
+{u'count': 49, u'_id': u'2010'}
+{u'count': 46, u'_id': u'2206'}
+{u'count': 43, u'_id': u'2038'}
+{u'count': 39, u'_id': u'2040'}
+{u'count': 35, u'_id': u'2049'}
+{u'count': 31, u'_id': u'2204'}
+{u'count': 30, u'_id': u'2216'}
+{u'count': 26, u'_id': u'2122'}
+{u'count': 26, u'_id': u'2009'}
+{u'count': 25, u'_id': u'2085'}
+{u'count': 24, u'_id': u'2131'}
+{u'count': 21, u'_id': u'2135'}
+{u'count': 20, u'_id': u'2015'}
+{u'count': 18, u'_id': u'NSW 2010'}
+{u'count': 18, u'_id': u'2043'}
+{u'count': 17, u'_id': u'2130'}
+{u'count': 16, u'_id': u'2044'}
+{u'count': 16, u'_id': u'2220'}
+{u'count': 15, u'_id': u'2016'}
+{u'count': 14, u'_id': u'2137'}
+{u'count': 13, u'_id': u'2138'}
+{u'count': 13, u'_id': u'2026'}
+{u'count': 12, u'_id': u'2017'}
+{u'count': 12, u'_id': u'2095'}
+{u'count': 11, u'_id': u'2031'}
+{u'count': 11, u'_id': u'2133'}
+{u'count': 10, u'_id': u'2020'}
+{u'count': 10, u'_id': u'2045'}
+{u'count': 10, u'_id': u'2093'}
+{u'count': 9, u'_id': u'2008'}
+{u'count': 9, u'_id': u'2066'}
+{u'count': 8, u'_id': u'2134'}
+{u'count': 8, u'_id': u'2036'}
+{u'count': 8, u'_id': u'2041'}
+{u'count': 8, u'_id': u'2046'}
+{u'count': 7, u'_id': u'2110'}
+{u'count': 7, u'_id': u'2021'}
+{u'count': 6, u'_id': u'2223'}
+{u'count': 6, u'_id': u'NSW 2000'}
+{u'count': 6, u'_id': u'2064'}
+{u'count': 6, u'_id': u'2022'}
+{u'count': 6, u'_id': u'2068'}
+{u'count': 5, u'_id': u'2061'}
+{u'count': 5, u'_id': u'2018'}
+{u'count': 5, u'_id': u'2114'}
+{u'count': 5, u'_id': u'2222'}
+{u'count': 4, u'_id': u'2029'}
+{u'count': 3, u'_id': u'2025'}
+{u'count': 3, u'_id': u'2032'}
+{u'count': 3, u'_id': u'NSW 2011'}
+{u'count': 3, u'_id': u'2069'}
+{u'count': 3, u'_id': u'2221'}
+{u'count': 3, u'_id': u'NSW 2022'}
+{u'count': 3, u'_id': u'2019'}
+{u'count': 3, u'_id': u'2094'}
+{u'count': 3, u'_id': u'2028'}
+{u'count': 3, u'_id': u'2005'}
+{u'count': 3, u'_id': u'2035'}
+{u'count': 2, u'_id': u'2194'}
+{u'count': 2, u'_id': u'2111'}
+{u'count': 2, u'_id': u'2006'}
+{u'count': 2, u'_id': u'2047'}
+{u'count': 2, u'_id': u'2090'}
+{u'count': 2, u'_id': u'2027'}
+{u'count': 2, u'_id': u'2033'}
+{u'count': 2, u'_id': u'2217'}
+{u'count': 2, u'_id': u'2140'}
+{u'count': 2, u'_id': u'2024'}
+{u'count': 2, u'_id': u'NSW 2026'}
+{u'count': 2, u'_id': u'2092'}
+{u'count': 1, u'_id': u'2030'}
+{u'count': 1, u'_id': u'200'}
+{u'count': 1, u'_id': u'NSW 2034'}
+{u'count': 1, u'_id': u'2052'}
+{u'count': 1, u'_id': u'NSW 2133'}
+{u'count': 1, u'_id': u'NSW 2021'}
+{u'count': 1, u'_id': u'2132'}
+{u'count': 1, u'_id': u'NSW 2068'}
+{u'count': 1, u'_id': u'2192'}
+{u'count': 1, u'_id': u'NSW 2037'}
+{u'count': 1, u'_id': u'2136'}
+{u'count': 1, u'_id': u'NSW 2015'}
+{u'count': 1, u'_id': u'210'}
+{u'count': 1, u'_id': u'2191'}
+{u'count': 1, u'_id': u'2039'}
