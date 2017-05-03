@@ -11,9 +11,9 @@ I firstly audited the osm file and converted it into .json file(see audit_street
 > mongoimport --db sydney --collection sydney --file sydney.osm.json
 
 ## Problems encontered in the Map
-There were two main problems in the dataset. One is the overabbrevated or even wrong street type, another is the wrong postcode. These problems were caused by inevitable human error and need to be fixed before the data being loaded to the database.
-### Overabbrevated/wrong street type
-The first problem I found was the street types. Some street types are full names such as "Street" and "Road" while others are abbrevated like "St", "Rd". Sometimes it can also be wrong such as "Street)".
+There were two main problems in the dataset. One is the overabbreviated or even wrong street type, another is the wrong postcode. These problems were caused by inevitable human error and need to be fixed before the data being loaded to the database.
+### Overabbreviated/wrong street type
+The first problem I found was the street types. Some street types are full names such as "Street" and "Road" while others are abbreviated like "St", "Rd". Sometimes it can also be wrong such as "Street)".
 
 Boulevard - boulevarde
 
@@ -119,9 +119,13 @@ db.sydney.aggregate([{"$match":{'created.user':{'$exists':1}}},
 ```
 
 ## Additional Ideas
-I found that there are relatively less error in the sydney area than that in cities of USA. The reason could be Australian are more cautious, but it is more likely that there are just fewer users of Open Street Map in Australia. A possible solution is to make the map contribution visible to activite users. For example, a "Contribution Ranking" could be published every week on the main page so that everyone knows there contribution would not be ignored.
+I found that there are relatively less error in the Sydney area than that in cities of USA. The reason could be Australian are more cautious, but it is more likely that there are just fewer users of Open Street Map in Australia. A possible solution is to make the map contribution visible to activate users. For example, a "Contribution Ranking" could be published every week on the main page so that everyone knows there contribution would not be ignored.
 
-I tried to use the geography position to do some interesting stuff such as where are most of the coffee shop located, or how many parking spot in every square KM? Then I realized that it is too complicated for me to calculate the latituede and altitude, only if there is a package specially for it.
+Another idea I have for OpenStreetMap to improve its data quality is to automatically revise the data people updated. Errors are inevitable due to the nature of the product, but it may cause problems when people use it. I noticed that most of the errors are similar such as different abbreviations, wrong postcodes etc. so that this issue can be solved programmatically just like what I did to clean the data.
+
+The benefit of auto correction is improving the data quality without requiring the user to put more efforts. A possible issue with the solution is that there may be some False Positive and False Negative when correcting the data by programs. For example a street may has a "St." in it's name, but the program may take it as a street type abbreviation and correct it. This issue can be solved by machine learning which take more features from correct data to audit the users' update.
+
+
 
 ## Additional Data Exploration
 ### What are the most popular cuisines in Sydney?

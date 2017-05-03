@@ -3,6 +3,7 @@ from pymongo import MongoClient
 client = MongoClient('mongodb://localhost:27017')
 db = client.sydney
 
+# select the most enthusiastic users.
 def most_enthusiastic_user():
     result = db.sydney.aggregate([{"$match":{'created.user':{'$exists':1}}},
                                 {'$group':{'_id':'$created.user',
@@ -11,6 +12,7 @@ def most_enthusiastic_user():
                                  {'$limit':10}])
     return result
 
+# select the most popular amenities
 def most_popular_amenities():
     result = db.sydney.aggregate([
         {'$match':{'amenity':{'$exists':1}}},
@@ -21,7 +23,7 @@ def most_popular_amenities():
     ])
     return result
 
-
+# select the most popular cuisine
 def most_popular_cuisine():
     result = db.sydney.aggregate([
         {'$match':{'cuisine':{'$exists':1}}},
@@ -32,7 +34,7 @@ def most_popular_cuisine():
     ])
     return result
 
-
+# select the most popular religion
 def most_popular_religion():
     result = db.sydney.aggregate([
         {'$match':{'religion':{'$exists':1}}},

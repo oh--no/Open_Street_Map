@@ -7,6 +7,7 @@ import json
 
 infile = 'sample.osm'
 outfile = 'HowManyTags.txt'
+
 # 找到所有tag的数量
 def findTags(infile):
     tags = {}
