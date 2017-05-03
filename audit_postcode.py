@@ -6,6 +6,7 @@ client = MongoClient('mongodb://localhost:27017')
 db = client.sydney
 re_postcode = re.compile(r'\b\d{4}')
 
+# how many different postcodes are there in the dataset.
 def audit_postcode():
     result = db.sydney.aggregate([
         {'$match':{'address.postcode':{'$exists':1}}},

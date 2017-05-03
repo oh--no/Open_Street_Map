@@ -103,30 +103,33 @@ fix_mapping = {
     'Wollit':'Wolli'
 }
 
+# if the street type in the street name is wrong, then fix it according to the fix mapping.
 def fix_street_name(street_name, fix_mapping):
     street_type = street_types_re.search(street_name).group()
     if street_type in fix_mapping:
         street_name = street_name.replace(street_type,fix_mapping[street_type])
     return street_name
 
+# shape the element in a more logical way. put the attributes of same kind together.
 def shape_element(element):
     node = {}
     created_dict = {}
     address = {}
     node_refs = []
-    if element.tag == "node" or element.tag == "way":
+    if element.tag == "node" or element.tag == "way": # gather the creation information together.
         for attribute in element.attrib:
             if attribute in CREATED:
                 created_dict[attribute] = element.attrib[attribute]
             elif attribute not in ['lat', 'lon']:
                 node[attribute] = element.attrib[attribute]
-        if set(['lat', 'lon']).issubset(element.attrib):
+        if set(['lat', 'lon']).issubset(element.attrib): # put the latitude and longitude together.
             pos = [float(element.attrib['lat']), float(element.attrib['lon'])]
             node['pos'] = pos
         node['created'] = created_dict
         node['type'] = element.tag
 
         for tag in element.iter('tag'):
+            # ignore the attributes with more than 1 colon.
             if tag.attrib['k'].count(':') > 1 or problemchars.search(tag.attrib['k']):
                 continue
             elif tag.attrib['k'].find('addr:') == 0:
@@ -134,16 +137,15 @@ def shape_element(element):
                     address['city'] = tag.attrib['v']
                 elif 'housenumber' in tag.attrib['k']:
                     address['housenumber'] = tag.attrib['v']
+                # audit the postcode to ensure it has 4 digits.
                 elif 'postcode' in tag.attrib['k'] and postcode_re.search(tag.attrib['v']):
                     address['postcode'] = postcode_re.search(tag.attrib['v']).group()
+                # fix the street type if it is wrong.
                 elif 'street' in tag.attrib['k'] and street_types_re.search(tag.attrib['v']):
                     address['street'] = fix_street_name(tag.attrib['v'],fix_mapping)
                 node['address'] = address
-            # elif lower_colon.search(tag.attrib['k']):
-
             else:
                 node[tag.attrib['k'].replace(':', '_')] = tag.attrib['v']
-        # YOUR CODE HERE
         for nd in element.iter('nd'):
             node_refs.append(nd.attrib['ref'])
         if node_refs != []:
@@ -154,7 +156,6 @@ def shape_element(element):
 
 
 def process_map(file_in, pretty=False):
-    # You do not need to change this file
     file_out = "{0}.json".format(file_in)
     data = []
     with codecs.open(file_out, "w") as fo:
